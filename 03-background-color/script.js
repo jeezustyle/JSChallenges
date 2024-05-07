@@ -1,11 +1,8 @@
-const red = document.getElementById('red')
-const green = document.getElementById('green')
-const blue = document.getElementById('blue')
 const inputs = document.querySelectorAll('input')
 
 const colorBodyChange = () => {
   let rgb = [...inputs].reduce((acc, curr) => {
-    return [...acc, localStorage.getItem(curr.id) || value]
+    return [...acc, localStorage.getItem(curr.id) || curr.value]
   }, [])
   document.body.style.backgroundColor = `rgb(${rgb.join(',')})`
 }
