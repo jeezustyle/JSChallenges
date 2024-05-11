@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./validation.js" defer></script>
+    <script src="./script.js" defer></script>
+    <title>ValidationForm</title>
+  </head>
+  <body>
+    <form id="form1" class="form" action="" novalidate>
+      <h3>Form Örneği</h3>
+      <ul>
+        <li>
+          <label>Kullanıcı Adı</label>
+          <input type="text" name="username" required />
+        </li>
+        <li>
+          <label>E-posta Adresiniz</label>
+          <input type="email" name="email" required />
+        </li>
+        <li>
+          <label>Şifreniz</label>
+          <input type="password" name="password" required />
+        </li>
+        <li>
+          <label>Github Adresiniz</label>
+          <input type="url" name="github_url" required />
+        </li>
+        <li>
+          <label>Bilgi Düzeyiniz</label>
+          <select name="knowledge" required>
+            <option value="">Seçin</option>
+            <option value="1">İyi Düzeyde</option>
+            <option value="2">Orta Düzeyde</option>
+            <option value="3">Başlangıç</option>
+          </select>
+        </li>
+        <li>
+          <label>Hakkınızda</label>
+          <textarea name="about" cols="30" rows="5" required></textarea>
+        </li>
+        <li>
+          <label>Fotoğrafınız</label>
+          <input type="file" name="photo" required />
+        </li>
+        <li>
+          <label>Cinsiyet</label>
+          <div class="radio-container">
+            <input type="radio" name="gender" value="1" required />Kadın
+            <input type="radio" name="gender" value="2" required />Erkek
+          </div>
+        </li>
+        <li>
+          <label>Kuralları okudum ve kabul ediyorum</label>
+          <div class="checkbox-container">
+            <input type="checkbox" required />
+          </div>
+        </li>
+        <li>
+          <button type="submit">Gönder</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
